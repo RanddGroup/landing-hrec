@@ -23,7 +23,7 @@ export class VideoFrameComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.elementRef.nativeElement.querySelector(
-        '.i-frame-call'
+        '#i-frame-call'
       ).style.display = 'flex';
 
       this.cdr.detectChanges();

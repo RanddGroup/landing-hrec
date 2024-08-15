@@ -1,32 +1,42 @@
-<footer class="main-footer">
-  <div class="footer-content">
-    <nav class="footer-nav">
-      <ul class="footer-list">
-        <li><a href="#" class="footer-link">Termos de Uso</a></li>
-        <li><a href="#" class="footer-link">Política de Privacidade</a></li>
-        <li><a href="#" class="footer-link">LGPD</a></li>
+<section class="footer">
+  <div class="footer__content">
+    <nav class="footer__content__nav">
+      <ul class="footer__content__nav__list">
+        @for (itemList of navFooterList; track itemList.id) {
+
+        <li>
+          <a [href]="itemList.href" class="footer__content__nav__list__link">{{
+            itemList.detail
+          }}</a>
+        </li>
+        }
       </ul>
     </nav>
 
-    <div class="footer-logo">
+    <div class="footer__content__logo">
       <img
         src="assets/logo/logo-large.svg"
         alt="Company logo"
-        class="logo-image"
+        class="footer__content__logo__image"
       />
-      <div class="logo-text">
-        <img src="assets/icon/social/instagram.svg" alt="" class="logo-icon" />
-        <span class="logo-name">h.recpro</span>
+
+      <div class="footer__content__logo__text-content">
+        <img
+          src="assets/icon/social/instagram.svg"
+          alt=""
+          class="footer__content__logo__text-content__name__icon"
+        />
+        <span class="footer__content__logo__text-content__name">h.recpro</span>
       </div>
     </div>
 
-    <div class="footer-cta">
-      <p class="cta-text">Transforme ideias em ações.</p>
-      <button class="cta-button">Entre em contato</button>
+    <div class="footer__content__cta">
+      <p class="footer__content__cta__text">Transforme ideias em ações.</p>
+      <button class="footer__content__cta__button">Entre em contato</button>
     </div>
   </div>
-</footer>
+</section>
 
-<div class="copyright">
-  <p style="margin: 0">Desenvolvido por Rand²</p>
-</div>
+<section class="copyright">
+  <p class="copyright__detail">Desenvolvido por Rand²</p>
+</section>

@@ -1,47 +1,65 @@
+p {
+  margin: 0;
+}
+
 .text-content {
   display: flex;
   min-width: 343px;
   flex-direction: column;
   justify-content: flex-start;
   flex: 1 0 0%;
-}
 
-.main-title {
-  color: var(--Colors-red-500, #ef4444);
-  opacity: var(--sds-size-stroke-border);
-  font: 700 39px/47px Lexend, sans-serif;
-}
+  &__title {
+    color: var(--Colors-red-500, #ef4444);
+    opacity: var(--sds-size-stroke-border);
+    font: 700 39px/47px Lexend, sans-serif;
+  }
 
-.divider {
-  display: flex;
-  margin-top: 32px;
-  width: 100%;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+  &__divider {
+    display: flex;
+    margin-top: 32px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
 
-.divider-image {
-  aspect-ratio: 500;
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  stroke-width: 1px;
-  stroke: var(--Colors-zinc-600, #52525b);
-  opacity: var(--sds-size-stroke-border);
-}
+    &__line {
+      color: #52525b;
+      border: 2px solid #52525b;
+    }
+  }
 
-.description-container {
-  margin-top: 32px;
-  width: 100%;
-  font: 400 20px/30px Lexend, sans-serif;
-  color: var(--Colors-zinc-200, #e4e4e7);
-  opacity: var(--sds-size-stroke-border);
-}
+  &__description-container {
+    margin-top: 32px;
+    width: 100%;
+    font: 400 20px/30px Lexend, sans-serif;
+    color: var(--Colors-zinc-200, #e4e4e7);
+    opacity: var(--sds-size-stroke-border);
 
-.secondary-description {
-  color: var(--Colors-zinc-300, #d4d4d8);
-  opacity: var(--sds-size-stroke-border);
-  margin-top: 12px;
+    &__primary-description,
+    &__secondary-description {
+      color: var(--Colors-zinc-300, #d4d4d8);
+      opacity: var(--sds-size-stroke-border);
+      margin-top: 12px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .text-content {
+      min-width: 100%;
+
+      &__title {
+        min-width: 100%;
+      }
+
+      &__divider {
+        min-width: 100%;
+      }
+
+      &__description-container {
+        min-width: 100%;
+      }
+    }
+  }
 }
 
 .media-content {
@@ -57,13 +75,13 @@
   flex: 1 0 0%;
   opacity: var(--sds-size-stroke-border);
   background: var(--Colors-zinc-800, #27272a);
-}
 
-.media-image {
-  aspect-ratio: 1;
-  object-fit: contain;
-  object-position: center;
-  width: 24px;
+  &__image {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
 }
 
 @media (max-width: 991px) {

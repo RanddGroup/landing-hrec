@@ -1,16 +1,15 @@
-<div style="display: flex">
-  <div class="slider">
-    <div class="slide-track">
+<section class="slide-section">
+  <div class="slide-section__slider">
+    <div class="slide-section__slider__slide-track">
       @for (client of clients; track client.id) {
-      <div class="slide">
+      <div class="slide-section__slider__slide-track__slide">
         <img
+          class="slide-section__slider__slide-track__slide__image"
           [src]="client.image"
-          height="72"
-          width="72"
           [attr.alt]="client.name"
         />
       </div>
       }
     </div>
   </div>
-</div>
+</section>
