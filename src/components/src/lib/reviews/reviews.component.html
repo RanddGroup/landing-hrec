@@ -1,27 +1,55 @@
-<section class="testimonials-section">
-  <h2 class="testimonials-title">Titulo</h2>
-  <div class="testimonials-container">
-    <article class="testimonial-card" *ngFor="let testimonial of testimonials">
-      <div class="rating">
+<section class="review">
+  <h2 class="review__title">Titulo</h2>
+
+  <div class="review__container">
+    @for (review of reviews; track review.id) {
+    <article class="review__container__card">
+      <div class="review__container__card__rating">
+        @for (star of [1,2,3,4,5]; track star) {
         <img
-          *ngFor="let star of [1, 2, 3, 4, 5]"
-          src="assets/icon/star.svg"
-          [alt]="star <= testimonial.rating ? 'Filled star' : 'Empty star'"
-          class="star-icon"
+          [src]="
+            review.rating >= star
+              ? 'assets/icon/star_selected.svg'
+              : 'assets/icon/star_unselected.svg'
+          "
+          [alt]="star <= review.rating ? 'Filled star' : 'Empty star'"
+          class="review__container__card__rating__star-icon"
         />
+        }
       </div>
-      <div class="testimonial-content">
-        <h3 class="testimonial-heading">{{ testimonial.title }}</h3>
-        <p class="testimonial-text">{{ testimonial.content }}</p>
+
+      <div class="review__container__card__content">
+        <h3 class="review__container__card__content__heading">
+          {{ review.title }}
+        </h3>
+
+        <p class="review__container__card__content__text">
+          {{ review.content }}
+        </p>
       </div>
-      <img [src]="testimonial.imageSrc" alt="" class="testimonial-image" />
-      <div class="user-info">
-        <div class="user-avatar"></div>
-        <div class="user-details">
-          <p class="user-name">{{ testimonial.author }}</p>
-          <p class="user-date">{{ testimonial.date }}</p>
+
+      <hr class="review__container__card__divider" />
+
+      <div class="review__container__card__user-info">
+        <img
+          [src]="review.avatar"
+          alt=""
+          class="review__container__card__user-info__avatar"
+        />
+
+        <!-- <div class="review__container__card__user-info__avatar"></div> -->
+
+        <div class="review__container__card__user-info__details">
+          <p class="review__container__card__user-info__name">
+            {{ review.author }}
+          </p>
+
+          <p class="review__container__card__user-info__date">
+            {{ review.date }}
+          </p>
         </div>
       </div>
     </article>
+    }
   </div>
 </section>
