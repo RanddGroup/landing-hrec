@@ -1,0 +1,16 @@
+<div style="display: flex">
+  <div class="slider">
+    <div class="slide-track">
+      @for (client of clients; track client.id) {
+      <div class="slide">
+        <img
+          [src]="client.image"
+          height="72"
+          width="72"
+          [attr.alt]="client.name"
+        />
+      </div>
+      }
+    </div>
+  </div>
+</div>

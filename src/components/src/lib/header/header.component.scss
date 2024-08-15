@@ -1,0 +1,18 @@
+.header-initial {
+  background-color: black;
+  height: 121.12px;
+  display: flex;
+  align-items: cente;
+  justify-content: space-between;
+  padding: 0 85px;
+}
+
+@media (max-width: 991px) {
+  .text-wrapper {
+    display: none;
+  }
+
+  .header-initial {
+    padding: 0;
+  }
+}

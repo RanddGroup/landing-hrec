@@ -1,12 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import {
-  CompanyCarouselComponent,
+  ClientsCarouselComponent,
+  ContainersComponent,
+  FooterComponent,
   HeaderComponent,
+  ReviewsComponent,
+  TagWordsComponent,
+  VideoFrameComponent,
 } from '@landing-hrec/components';
-import { ReviewsComponent } from 'src/components/src/lib/reviews/reviews.component';
-import { VideoFrameComponent } from 'src/components/src/lib/video-frame/video-frame.component';
 
 @Component({
   standalone: true,
@@ -14,14 +17,15 @@ import { VideoFrameComponent } from 'src/components/src/lib/video-frame/video-fr
     RouterModule,
     CommonModule,
     HeaderComponent,
-    CompanyCarouselComponent,
+    ClientsCarouselComponent,
     VideoFrameComponent,
     ReviewsComponent,
+    FooterComponent,
+    TagWordsComponent,
+    ContainersComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  private cdr = inject(ChangeDetectorRef);
-}
+export class AppComponent {}
