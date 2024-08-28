@@ -4,11 +4,20 @@
   <div class="tag-words__grid">
     @for (tag of tagWordsList; track tag.id) {
     <article class="tag-words__grid__item">
-      <div
+      <img
+        [src]="tag.img"
+        [attr.alt]="tag.title"
         class="tag-words__grid__item__video"
-        role="img"
-        aria-label="Video placeholder"
-      ></div>
+        style="
+          background: linear-gradient(
+              0deg,
+              rgba(187, 29, 29, 0.4) 0%,
+              rgba(187, 29, 29, 0.4) 100%
+            ),
+            lightgray 50% / cover no-repeat, #27272a;
+          mix-blend-mode: hard-light;
+        "
+      />
 
       <hr class="tag-words__grid__item__line" />
 
