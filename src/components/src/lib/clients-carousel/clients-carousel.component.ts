@@ -110,6 +110,31 @@ export class ClientsCarouselComponent {
       name: 'Zibrow',
       image: 'assets/clients/zibrow-barbearia.png',
     },
+    {
+      id: 11111,
+      name: 'Hot Dog Expresso',
+      image: 'assets/clients/hot-dog.png',
+    },
+    {
+      id: 11112,
+      name: 'Lera Pepper',
+      image: 'assets/clients/lera-pepper.png',
+    },
+    {
+      id: 11113,
+      name: 'Matheus Lera',
+      image: 'assets/clients/matheus-lera.png',
+    },
+    {
+      id: 11114,
+      name: 'Pasta Way',
+      image: 'assets/clients/pasta-way.png',
+    },
+    {
+      id: 11115,
+      name: 'Zibrow',
+      image: 'assets/clients/zibrow-barbearia.png',
+    },
   ];
 }
 

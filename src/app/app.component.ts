@@ -10,6 +10,7 @@ import {
   TagWordsComponent,
   VideoFrameComponent,
 } from '@landing-hrec/components';
+import { CtaViewComponent } from 'src/components/src/lib/cta-view/cta-view.component';
 
 @Component({
   standalone: true,
@@ -23,6 +24,7 @@ import {
     FooterComponent,
     TagWordsComponent,
     ContainersComponent,
+    CtaViewComponent,
   ],
   selector: 'app-root',
   templateUrl: './app.component.html',
