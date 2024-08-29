@@ -214,10 +214,6 @@ p {
   width: 24px;
 }
 
-.logo-text {
-  align-self: stretch;
-}
-
 .cta-container {
   display: flex;
   min-width: 218px;
@@ -298,4 +294,14 @@ p {
   width: 8px;
   height: 12px;
   font: 800 12px JetBrains Mono, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+@media (max-width: 991px) {
+  .content {
+    justify-content: center;
+  }
+
+  .cta-button {
+    align-self: center;
+  }
 }

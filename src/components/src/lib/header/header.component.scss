@@ -1,3 +1,15 @@
+.img-mobile {
+  height: 48px;
+  width: 48px;
+  display: none;
+}
+
+.img-desktop {
+  height: 48px;
+  width: 128px;
+  display: block;
+}
+
 .header {
   background-color: black;
   height: 121.12px;
@@ -8,11 +20,6 @@
 
   &__content-image {
     align-content: center;
-
-    &__image {
-      height: 48;
-      width: 128px;
-    }
   }
 
   &__social {
@@ -56,8 +63,16 @@
 }
 
 @media (max-width: 991px) {
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+  }
+
   .header {
-    padding: 0;
+    padding: 8px 12px;
 
     &__social {
       &__button {

@@ -4,11 +4,6 @@
   flex-wrap: wrap;
   padding: 72px 16px;
 
-  // &__spacer {
-  //   width: 64px;
-  //   height: 360px;
-  // }
-
   &__content {
     display: flex;
     min-width: 343px;
@@ -23,13 +18,14 @@
 }
 
 @media (max-width: 991px) {
+  .reverse-mobile {
+    flex-flow: wrap-reverse;
+  }
+
   .double-container {
     &__content {
       max-width: 100%;
-    }
-
-    &__spacer {
-      display: none;
+      gap: 42px;
     }
   }
 }
