@@ -23,6 +23,10 @@ export class HeaderComponent {
       detail: 'Entre em contato',
     },
   ];
+
+  isMobile(): boolean {
+    return window.matchMedia('(max-width: 991px)').matches;
+  }
 }
 
 export interface SocialButton {
