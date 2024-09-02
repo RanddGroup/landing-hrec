@@ -3,10 +3,21 @@
 @import 'primeng/resources/primeng.css';
 @import './reset.scss';
 
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
 .body {
-  // justify-content: center;
-  // display: flex;
   background-color: #070709;
+  background-image: url('/assets/background.png');
+
+  // display: block;
+  min-height: 100vh;
+  // background-image: url('/assets/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-color: #070709;
+  backdrop-filter: blur(100px);
 
   &__content {
     max-width: 1228px;
