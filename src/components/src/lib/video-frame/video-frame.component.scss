@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 8px;
+    gap: 50px;
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -26,6 +26,13 @@
 
     &__title {
       font-size: 60px;
+      color: #fafafa;
+      text-align: center;
+      font-family: Lexend;
+      font-size: 61px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
     }
 
     &__sub-content {
@@ -35,10 +42,64 @@
 
       &__title {
         font-size: 20px;
+
+        color: #fafafa;
+        text-align: center;
+        font-family: Lexend;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
       }
 
       &__sub-title {
         font-size: 20px;
+      }
+    }
+  }
+}
+
+.free-quote-button {
+  border-radius: 48px;
+  border: 3px solid #09090b;
+  background: #ef4444;
+  box-shadow: 0 0 0 2px #f54f52;
+  min-height: 48px;
+  padding: 12px 24px;
+  color: #fff;
+  text-align: center;
+  font: 600 18px/1 Lexend, sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.free-quote-button:hover,
+.free-quote-button:focus {
+  background-color: #dc2626;
+  outline: none;
+}
+
+.free-quote-button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5);
+}
+
+@media (max-width: 991px) {
+  .divider-br {
+    display: none;
+  }
+
+  .section-frame {
+    &__content {
+      gap: 20px;
+
+      &__title {
+        font-size: 50px;
+      }
+
+      &__sub-content {
+        &__title {
+          font-size: 18px;
+        }
       }
     }
   }
